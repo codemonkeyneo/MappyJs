@@ -44,13 +44,13 @@ var Mappy = function() {
 				lat: {
 					deg: Math.abs(latD), // Degrees
 					min: Math.abs(latM), // Minutes
-					sec: Math.abs(latS), // Seconds
+					sec: Math.round(Math.abs(latS)), // Seconds
 					com: latC // Compass direction
 				},
 				lon: {
 					deg: Math.abs(lonD), // Degrees
 					min: Math.abs(lonM), // Minutes
-					sec: Math.abs(lonS), // Seconds
+					sec: Math.round(Math.abs(lonS)), // Seconds
 					com: lonC // Compass direction
 				}
 			}
