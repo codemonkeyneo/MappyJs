@@ -5,7 +5,7 @@ Map function helpers for Javascipt that I have found useful. Hopefully will help
 
 Converting Latitude and Longitude to DMS representation.
 
-    Mappy.convertLatLngToDMS(-31.934444, 77.037777);  // lat, lon
+    MappyJs.convertLatLngToDMS(-31.934444, 77.037777);  // lat, lon
 
 This will return the DMS for each decimal coordintate into a broken down DMS structure.
 

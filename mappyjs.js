@@ -1,10 +1,10 @@
 /**
- * Mappy helper Lib v1.0.0
- * simply include this simple library to then have a Mappy helper
- * to perform common operation required when working with Maps.
+ * MappyJs helper Lib v1.0.0
+ * simply include this simple library to then have a MappyJs helper
+ * to perform common operations required when working with Maps.
  *
  */
-var Mappy = function() {
+var MappyJs = function() {
 	
 	var DEG_TO_RAD = Math.PI / 180;
 	var DEG_PER_RAD = (180.0/Math.PI);
