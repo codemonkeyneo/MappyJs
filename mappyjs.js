@@ -27,7 +27,36 @@ var Mappy = function() {
 			var y = Math.sin(dLon) * Math.cos(lat2);
 			var x = Math.cos(lat1)*Math.sin(lat2)-Math.sin(lat1)*Math.cos(lat2)*Math.cos(dLon);
 			return DEG_PER_RAD * Math.atan2(y, x);
+		},
+		convertLatLngToDMS: function(lat, lon) {
+			// Latitude
+			var latD = Math.trunc(lat);
+			var latM = Math.trunc(lat * 60) % 60;
+			var latS = (lat * 3600) % 60;
+			var latC = latD >= 0 ? 'N' : 'S' ;
+			// Longitude
+			var lonD = Math.trunc(lon);
+			var lonM = Math.trunc(lon * 60) % 60;
+			var lonS = (lon * 3600) % 60;
+			var lonC = lonD >= 0 ? 'E' : 'W' ;
+		
+			return {
+				lat: {
+					deg: Math.abs(latD), // Degrees
+					min: Math.abs(latM), // Minutes
+					sec: Math.abs(latS), // Seconds
+					com: latC // Compass direction
+				},
+				lon: {
+					deg: Math.abs(lonD), // Degrees
+					min: Math.abs(lonM), // Minutes
+					sec: Math.abs(lonS), // Seconds
+					com: lonC // Compass direction
+				}
+			}
 		}
+		
+		
 	}
 
 }();
